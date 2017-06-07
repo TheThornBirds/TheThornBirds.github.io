@@ -1,0 +1,1131 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="python函数代码笔记">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python函数">
+<meta property="og:url" content="thornbirds.github.io/2017/06/06/python函数/index.html">
+<meta property="og:site_name" content="晨">
+<meta property="og:description" content="python函数代码笔记">
+<meta property="og:updated_time" content="2017-06-07T03:44:07.624Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python函数">
+<meta name="twitter:description" content="python函数代码笔记">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="thornbirds.github.io/2017/06/06/python函数/"/>
+
+
+
+
+
+  <title>python函数 | 晨</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">晨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">电脑是我的恩人，刘先艳是爱人</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="thornbirds.github.io/2017/06/06/python函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="吴晨">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python函数</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T12:25:27+08:00">
+                2017-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/06/06/python函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/06/06/python函数/" class="leancloud_visitors" data-flag-title="python函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>python函数代码笔记<br><a id="more"></a><br>以下代码框内的代码均可直接复制粘贴运行</p>
+<h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><pre><code>'''Python内置了很多有用的函数，我们可以直接调用。
+
+要调用一个函数，需要知道函数的名称和参数，比如求绝对值的函数abs，只有一个参数。
+
+可以直接从Python的官方网站查看文档：
+
+http://docs.python.org/3/library/functions.html#abs'''
+
+print(abs(100)) #调用abs函数，求绝对值，只接受一个参数，类型不可以是字符
+
+print(max(1, 2))    #max()可以接受多个参数，并返回最大的那个
+
+print(int('123'))   #int()函数，把其他数据类型转换为整数
+print(int(12.34))
+
+print(float('12'))   #float()函数，把其他数据类型转换为浮点数
+
+print(str(1.23))    #str()函数，把其他数据类型转换为字符串
+
+print(bool(2))     #bool()函数，把其他数据类型转换为布尔值
+print(bool(''))
+
+#函数名其实就是指向一个函数对象的引用，完全可以把函数名赋给一个变量，相当于给这个函数起了一个“别名”：
+a = abs
+print(a(-1))</code></pre>
+
+<hr>
+<h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><pre><code>'''定义一个函数要使用def语句，依次写出函数名、括号、括号中的参数和冒号:，
+然后，在缩进块中编写函数体，函数的返回值用return语句返回。'''
+def my_abs(x):
+    if x >= 0:
+        return x
+    else:
+        return -x
+print(my_abs(-5))
+
+def nop():  #定义一个空函数，就是什么事情都不做的函数
+    pass
+
+age = 20    #pass还可以用在其他语句里，
+if age >= 18:
+    pass
+
+'''print(my_abs(-5, 5)) #如果传的参数个数不对，python会自动检查出来'''
+
+'''print(my_abs('a'))  #当传入的参数类型不对时，不会进行参数检查，会出错'''
+
+'''def my_abs(x):  
+    if not isinstance(x, (int, float)): #对参数进行检查，只允许整数和浮点数的类型，这里使用isinstance()实现
+        raise  TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+print(my_abs('a'))  #如果传入错误的参数类型，函数就可以抛出一个错误：'''
+
+import  math    #import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。
+def move(x, y, step, angle=0):  #该函数可以返回多个值
+    nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx, ny
+print(move(100, 100, 60, math.pi / 6))  #其实返回的仍然是单一值，但是是一个tuple
+</code></pre>
+
+<hr>
+<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><pre><code>'''定义函数的时候，我们把参数的名字和位置确定下来，函数的接口定义就完成了。
+对于函数的调用者来说，只需要知道如何传递正确的参数，以及函数将返回什么样的值就够了'''
+
+#位置参数
+def power (x):  #一个计算x的二次方的函数
+   return x * x
+print(power(5))
+
+def power (x, n):   #修改后的power(x, n)函数，可以计算任意n次方
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+print(power(5, 3))
+'''修改后的power(x, n)函数有两个参数：x和n，这两个参数都是位置参数，
+    调用函数时，传入的两个值按照位置顺序依次赋给参数x和n
+    新的power(x, n)函数定义没有问题，但是，旧的调用代码失败了，
+    原因是我们增加了一个参数，导致旧的代码因为缺少一个参数而无法正常调用'''</code></pre>
+
+<hr>
+<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><pre><code>#默认参数
+'''由于我们经常计算x的平方，所以，完全可以把第二个参数n的默认值设定为2：'''
+def power(x, n = 2):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+print(power(2)) #此时，当我们调用power(5)时，相当于调用power(5, 2)
+print(power(5, 3))  #对于n>2的其他情况，就必须明确地传入n
+'''设置默认参数时，有几点要注意：
+1.必选参数在前，默认参数在后，否则Python的解释器会报错
+2.当函数有多个参数时，把变化大的参数放前面，变化小的参数放后面。
+  变化小的参数就可以作为默认参数
+'''
+
+#举例：写个一年级小学生注册的函数，需要传入name和gender两个参数：
+def enroll(name, gender):
+    print('name:', name)
+    print('gender:', gender)
+enroll('chen', '男') #此时，调用enroll()函数只需要传入两个参数
+
+'''如果要继续传入年龄、城市等信息怎么办？这样会使得调用函数的复杂度大大增加。
+我们可以把年龄和城市设为默认参数：'''
+def enroll(name, gender, age=6, city='beijing'):
+    print('name:', name)
+    print('gender:', gender)
+    print('age:', age)
+    print('city:', city)
+
+#这样，大多数学生注册时不需要提供年龄和城市，只提供必须的两个参数：
+enroll('chenchen', '男')
+
+#只有与默认参数不符的学生才需要提供额外的信息：
+enroll('liuliu', '女', 7)
+enroll('yanyan', '女', city='nanjing')
+'''有多个默认参数时，调用的时候，既可以按顺序提供默认参数，
+比如调用enroll('Bob', 'M', 7)，意思是，除了name，gender这两个参数外，
+最后1个参数应用在参数age上，city参数由于没有提供，仍然使用默认值。
+也可以不按顺序提供部分默认参数。当不按顺序提供部分默认参数时，
+需要把参数名写上。比如调用enroll('Adam', 'M', city='Tianjin')，
+意思是，city参数用传进去的值，其他默认参数继续使用默认值。'''
+
+#踩坑举例
+def add_end(L=[]):   #传入list做参数
+    L.append('END')
+    return L
+print(add_end([1, 2, 3]))   #正常调用，没有问题
+print(add_end())    #默认参数调用，暂时没有问题
+print(add_end())    #结果出错，L的值被改变了，牢记一点，默认参数必须指向不可变对象
+
+def add_end(L=None):    #使用None这个不变对象实现，无论调用多少次，都不会有问题了
+    if L is None:
+        L = []
+    L.append('END')
+    return L
+print(add_end())
+print(add_end())</code></pre>
+
+<hr>
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><pre><code>#可变参数
+'''在Python函数中，还可以定义可变参数。顾名思义，可变参数就是传入的参数个数是可变的，'''
+def calc(numbers):  #由于参数个数不确定，首先想到可以把a，b，c……作为一个list或tuple传进来
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+print(calc([1, 2, 3]))  #计算a2 + b2 + c2 + ...=,这样写虽然解决了问题，但是代码不够简化
+
+#所以我们使用可变参数作为函数的参数
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+print(calc(1, 2, 3))
+
+#如果已经有一个list或tuple,要调用一个可变参数
+nums = [1, 2, 3]
+print(calc(nums[0], nums[1], nums[2]))  #繁琐的做法
+print(calc(*nums))  #简单的做法，加一个*号，代表把list或tuple的元素变成可变参数传进去</code></pre>
+
+<hr>
+<h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><pre><code>#关键字参数
+#关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict。
+def person(name , age , **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+#函数person除了必选参数name和age外，还接受关键字参数kw。在调用该函数时，可以只传入必选参数
+person('chenchen', 22)
+#也可以传入任意个数的关键字参数
+person('lala', 30 , city='beijing')
+person('gaygay', 45, gender='女', job='Engineer')
+'''关键字参数有什么用？
+它可以扩展函数的功能。比如，在person函数里，我们保证能接收到name和age这两个参数，
+但是，如果调用者愿意提供更多的参数，我们也能收到。试想你正在做一个用户注册的功能，
+除了用户名和年龄是必填项外，其他都是可选项，利用关键字参数来定义这个函数就能满足注册的需求。'''
+
+#上述代码亦有简化写法
+extra = {'city':'beijing', 'job':'Engineer'}
+person('Jack', 24, **extra)
+'''**extra表示把extra这个dict的所有key-value用关键字参数传入到函数的**kw参数，kw将获得一个dict，
+注意kw获得的dict是extra的一份拷贝，对kw的改动不会影响到函数外的extra。'''</code></pre>
+
+<hr>
+<h3 id="命名关键字参数"><a href="#命名关键字参数" class="headerlink" title="命名关键字参数"></a>命名关键字参数</h3><pre><code>#命名关键字参数
+'''对于关键字参数，函数的调用者可以传入任意不受限制的关键字参数。
+至于到底传入了哪些，就需要在函数内部通过kw检查。
+仍以person()函数为例，我们希望检查是否有city和job参数：'''
+def person(name, age , **kw):
+    if 'city' in kw:
+        #有city参数
+        pass
+    if 'job' in kw:
+        #有job参数
+        pass
+    print('name:',name, 'age:', age, 'other:', kw)
+person('Jack', 24, city='beijing', addr='chaoyang', zipcode=123456) #调用者仍可以传入不受限制的关键字参数：
+
+'''如果要限制关键字参数的名字，就可以用命名关键字参数，
+例如，只接收city和job作为关键字参数。这种方式定义的函数如下：'''
+def person(name, age, *, city, job):
+    print(name, age , city, job)
+#和关键字参数**kw不同，命名关键字参数需要一个特殊分隔符*，*后面的参数被视为命名关键字参数。
+person('jack', 24, city='beijing', job='houzi')
+
+#如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符*了：
+def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
+#命名关键字参数必须传入参数名，这和位置参数不同。如果没有传入参数名，调用将报错
+#person('chen', 24, 'beijing', 'houzi')
+'''由于调用时缺少参数名city和job，Python解释器把这4个参数均视为位置参数，
+但person()函数仅接受2个位置参数。'''
+def person(name, age, *, city='beijing', job):  #命名关键字参数可以有缺省值，从而简化调用：
+    print(name, age , city, job)
+#由于命名关键字参数city具有默认值，调用时，可不传入city参数
+person('chen', 21, job='houzi')
+
+'''
+使用命名关键字参数时，要特别注意，如果没有可变参数，就必须加一个*作为特殊分隔符。
+如果缺少*，Python解释器将无法识别位置参数和命名关键字参数：
+'''
+def person(name, age, city, job):
+    #缺少*，city和job被视为位置参数
+    pass</code></pre>
+
+<hr>
+<h3 id="参数组合"><a href="#参数组合" class="headerlink" title="参数组合"></a>参数组合</h3><pre><code>#参数组合
+'''
+在Python中定义函数，可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，
+这5种参数都可以组合使用。但是请注意，参数定义的顺序必须是：
+必选参数、默认参数、可变参数、命名关键字参数和关键字参数。
+比如定义一个函数，包含上述若干种参数：
+'''
+def f1(a, b, c=0, *args, **kw):
+    print('a=', a, 'b=', b, 'c=', c, 'args=', args, 'kw=', kw)
+def f2(a, b, c=0, *, d, **kw):
+    print('a=', a, 'b=', b, 'c=', c, 'd=', d, 'kw=', kw)
+#在函数调用的时候，Python解释器自动按照参数位置和参数名把对应的参数传进去。
+f1(1,2)
+f1(1, 2, c=3)
+f1(1, 2, 3, 'a', 'b')
+f1(1, 2, 3, 'a', 'b', x=99)
+f2(1, 2, d=99, ext=None)
+
+#通过一个tuple和dict，你也可以调用上述函数
+args = (1, 2, 3, 4)
+kw = {'d': 99, 'x': '#'}
+f1(*args, **kw)
+args = (1, 2, 3)
+kw = {'d': 88, 'x': '#'}
+f2(*args, **kw)
+#所以，对于任意函数，都可以通过类似func(*args, **kw)的形式调用它，无论它的参数是如何定义的</code></pre>
+
+<hr>
+<h3 id="函数的参数总结"><a href="#函数的参数总结" class="headerlink" title="函数的参数总结"></a>函数的参数总结</h3><p>Python的函数具有非常灵活的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数。</p>
+<p>默认参数一定要用不可变对象，如果是可变对象，程序运行时会有逻辑错误！</p>
+<p>要注意定义可变参数和关键字参数的语法：</p>
+<p>*args是可变参数，args接收的是一个tuple；</p>
+<p>**kw是关键字参数，kw接收的是一个dict。</p>
+<p>以及调用函数时如何传入可变参数和关键字参数的语法：</p>
+<p>可变参数既可以直接传入：func(1, 2, 3)，又可以先组装list或tuple，再通过<em>args传入：func(</em>(1, 2, 3))；</p>
+<p>关键字参数既可以直接传入：func(a=1, b=2)，又可以先组装dict，再通过<strong>kw传入：func(</strong>{‘a’: 1, ‘b’: 2})。</p>
+<p>使用<em>args和*</em>kw是Python的习惯写法，当然也可以用其他参数名，但最好使用习惯用法。</p>
+<p>命名的关键字参数是为了限制调用者可以传入的参数名，同时可以提供默认值。</p>
+<p>定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符*，否则定义的将是位置参数。</p>
+<hr>
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><pre><code>#在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是递归函数。
+'''
+举个例子，我们来计算阶乘n! = 1 x 2 x 3 x ... x n，用函数fact(n)表示，可以看出：
+
+fact(n) = n! = 1 x 2 x 3 x ... x (n-1) x n = (n-1)! x n = fact(n-1) x n
+
+所以，fact(n)可以表示为n x fact(n-1)，只有n=1时需要特殊处理。
+
+于是，fact(n)用递归的方式写出来就是
+'''
+def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n - 1)
+print(fact(998))</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/02/python基础/" rel="next" title="python基础">
+                <i class="fa fa-chevron-left"></i> python基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="吴晨" />
+          <p class="site-author-name" itemprop="name">吴晨</p>
+           
+              <p class="site-description motion-element" itemprop="description">多学比少学好，少学比不学好</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/TheThornBirds" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wuchenxx/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wu-chen-89-78/answers" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用函数"><span class="nav-number">1.</span> <span class="nav-text">调用函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义函数"><span class="nav-number">2.</span> <span class="nav-text">定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的参数"><span class="nav-number">3.</span> <span class="nav-text">函数的参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#位置参数"><span class="nav-number">3.1.</span> <span class="nav-text">位置参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认参数"><span class="nav-number">3.2.</span> <span class="nav-text">默认参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可变参数"><span class="nav-number">3.3.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字参数"><span class="nav-number">3.4.</span> <span class="nav-text">关键字参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名关键字参数"><span class="nav-number">3.5.</span> <span class="nav-text">命名关键字参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数组合"><span class="nav-number">3.6.</span> <span class="nav-text">参数组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的参数总结"><span class="nav-number">3.7.</span> <span class="nav-text">函数的参数总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归函数"><span class="nav-number">4.</span> <span class="nav-text">递归函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吴晨</span>
+</div>
+
+
+<div class="powered-by">
+  Power by <a class="theme-link" href="https://hexo.io">Hexo</a>  
+</div>
+
+<div class="theme-info">
+  Theme by -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "6f09817f67584aba948a6fb55ef7f545",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("8utGy7Ay3un72xrtKWBFX3Yb-gzGzoHsz", "dxbBzQzTASchdrxxzy7VUFyg");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
