@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="http," />
 
 
 
@@ -90,17 +90,21 @@
 
 
 
-<meta name="description" content="多学比少学好，少学比不学好">
-<meta name="keywords" content="python">
+<meta name="description" content="粗略的了解了一下HTTP的工作原理以及一些结构信息">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python面向对象编程">
-<meta property="og:url" content="thornbirds.github.io/2017/06/21/python面向对象编程/index.html">
+<meta property="og:title" content="HTTP学习笔记">
+<meta property="og:url" content="thornbirds.github.io/2017/08/11/HTTP学习笔记/index.html">
 <meta property="og:site_name" content="晨">
-<meta property="og:description" content="多学比少学好，少学比不学好">
-<meta property="og:updated_time" content="2017-06-21T09:54:30.073Z">
+<meta property="og:description" content="粗略的了解了一下HTTP的工作原理以及一些结构信息">
+<meta property="og:image" content="http://orw54ij9s.bkt.clouddn.com/cgiarch.gif">
+<meta property="og:image" content="http://orw54ij9s.bkt.clouddn.com/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87.png">
+<meta property="og:image" content="http://orw54ij9s.bkt.clouddn.com/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E6%B6%88%E6%81%AF.jpg">
+<meta property="og:updated_time" content="2017-08-11T09:32:40.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python面向对象编程">
-<meta name="twitter:description" content="多学比少学好，少学比不学好">
+<meta name="twitter:title" content="HTTP学习笔记">
+<meta name="twitter:description" content="粗略的了解了一下HTTP的工作原理以及一些结构信息">
+<meta name="twitter:image" content="http://orw54ij9s.bkt.clouddn.com/cgiarch.gif">
 
 
 
@@ -128,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="thornbirds.github.io/2017/06/21/python面向对象编程/"/>
+  <link rel="canonical" href="thornbirds.github.io/2017/08/11/HTTP学习笔记/"/>
 
 
 
 
 
-  <title>python面向对象编程 | 晨</title>
+  <title>HTTP学习笔记 | 晨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -264,7 +268,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="thornbirds.github.io/2017/06/21/python面向对象编程/">
+    <link itemprop="mainEntityOfPage" href="thornbirds.github.io/2017/08/11/HTTP学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="吴晨">
@@ -281,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python面向对象编程</h1>
+          <h1 class="post-title" itemprop="name headline">HTTP学习笔记</h1>
         
 
         <div class="post-meta">
@@ -293,8 +297,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T17:50:28+08:00">
-                2017-06-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-11T17:31:31+08:00">
+                2017-08-11
               </time>
             
 
@@ -312,7 +316,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/06/21/python面向对象编程/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/08/11/HTTP学习笔记/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -321,7 +325,7 @@
 
           
           
-             <span id="/2017/06/21/python面向对象编程/" class="leancloud_visitors" data-flag-title="python面向对象编程">
+             <span id="/2017/08/11/HTTP学习笔记/" class="leancloud_visitors" data-flag-title="HTTP学习笔记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -349,7 +353,76 @@
       
 
       
-        
+        <p>粗略的了解了一下HTTP的工作原理以及一些结构信息<br><a id="more"></a></p>
+<h1 id="HTTP学习笔记"><a href="#HTTP学习笔记" class="headerlink" title="HTTP学习笔记"></a>HTTP学习笔记</h1><hr>
+<p>HTTP协议（HyperText Transfer Protocol，超文本传输协议）是因特网上应用最为广泛的一种网络传输协议，所有的WWW文件都必须遵守这个标准。<br>HTTP是一个基于TCP/IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。</p>
+<h2 id="HTTP简介"><a href="#HTTP简介" class="headerlink" title="HTTP简介"></a>HTTP简介</h2><h3 id="HTTP工作原理"><a href="#HTTP工作原理" class="headerlink" title="HTTP工作原理"></a>HTTP工作原理</h3><p>HTTP协议工作于客户端——服务端架构上。浏览器作为客户端通过URL向服务器发送所有请求</p>
+<p>WEB服务器有：Apache服务器，IIS服务器……</p>
+<p>WEB服务器根据收到的请求后，向客户端发送相应</p>
+<p>HTTP的默认端口号是80，可修改为其他端口</p>
+<p>HTTP三点注意事项：</p>
+<ul>
+<li>HTTP是无连接:无连接的含义是每次连接只处理一个请求，服务器处理完请求，并收到客户的应答，即断开连接，采用此方式可以节省传输时间。</li>
+<li>HTTP是媒体独立的:只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送，客户端以及服务器指定使用适合的MIME-type内容类型。</li>
+<li>HTTP是无状态的:HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力，缺少状态意味着如果后续处理前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时他的应答就比较快。</li>
+</ul>
+<p>下图即展示了HTTP协议通信流程:</p>
+<p><img src="http://orw54ij9s.bkt.clouddn.com/cgiarch.gif" alt="协议图"></p>
+<h2 id="HTTP消息结构"><a href="#HTTP消息结构" class="headerlink" title="HTTP消息结构"></a>HTTP消息结构</h2><p>HTTP是基于C/S的架构模型，通过一个链接来交换信息，是一个无状态的请求/响应协议。</p>
+<p>一个HTTP客户端是一个应用程序(WEB浏览器或者其他任何客户端)，通过连接到服务器达到向服务器发送一个或多个HTTP请求的目的。</p>
+<p>一个HTTP服务器同样也是一个应用程序(通常是一个WEB服务，如Apache Web服务器)，通过接收客户端的请求并向客户端发送HTTP响应数据</p>
+<p>HTTP使用同意资源标识符(URL)来传输数据和建立连接。</p>
+<p>一旦建立连接后，数据消息就通过类似Internet邮件所使用的格式[RFC5322]和多用途Internet右键扩展(MIME)[RFC2045]来传送</p>
+<hr>
+<h3 id="客户端请求消息"><a href="#客户端请求消息" class="headerlink" title="客户端请求消息"></a>客户端请求消息</h3><p>客户端发送一个HTTP请求到服务器的请求消息包括以下格式:请求行(request line)、请求头部(header)、空行和请求数据四个部分组成，下图是请求报文的一般格式。</p>
+<p><img src="http://orw54ij9s.bkt.clouddn.com/http%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87.png" alt="HTTP请求报文"></p>
+<hr>
+<h3 id="服务器响应消息"><a href="#服务器响应消息" class="headerlink" title="服务器响应消息"></a>服务器响应消息</h3><p>HTTP响应也由四个部分组成，分别是状态行、消息报头、空行、和响应正文。</p>
+<p><img src="http://orw54ij9s.bkt.clouddn.com/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E6%B6%88%E6%81%AF.jpg" alt="服务器响应消息"></p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>下面实例是典型的使用GET来传递数据的实例:</p>
+<p>客户端请求:</p>
+<pre><code>GET /hello.txt HTTP/1.1
+User-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3
+Host: www.example.com
+Accept-Language: en, mi
+</code></pre><h2 id="HTTP请求方法"><a href="#HTTP请求方法" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h2><p>根据HTTP标准，HTTP请求可以使用多种请求方法。</p>
+<p>HTTP1.0定义了三种请求方法:GET，POST和HEAD方法。</p>
+<p>HTTP1.1新增了五种请求方法:OPTIONS,PUT,DELETE,TRACE和CONNECT方法。</p>
+<ol>
+<li>GET    请求指定的页面信息，并返回实体主体</li>
+<li>HEAD    类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头</li>
+<li>POST    向指定资源提交数据并进行处理请求(例如提交表单或上传文件)。数据被包含在请求体中，POST请求可能会导致新的资源的建立或已有资源的修改。</li>
+<li>PUT    从客户端向服务器传送的数据取代指定的文档的内容。</li>
+<li>DELETE    请求服务器删除指定的页面</li>
+<li>CONNECT    HTTP/1.1协议中预留给能够将连接改为管到方式的代理服务器</li>
+<li>OPTIONS    允许客户端查看服务器的性能</li>
+<li>TRACE    回显服务器收到的请求，主要用于测试或诊断</li>
+</ol>
+<h2 id="HTTP响应头信息"><a href="#HTTP响应头信息" class="headerlink" title="HTTP响应头信息"></a>HTTP响应头信息</h2><ol>
+<li>Allow    服务器支持哪些请求方法(GET,POST等)。</li>
+<li>Content-Encoding    文档的编码方法，只有在解码之后才可以得到content-type头指定的内容类型。</li>
+<li>Content-Length    表示内容长度，只有当浏览器使用持久HTTP连接时才需要这个数据。</li>
+<li>Content-Type    表示后面的文档属于什么MIME类型，servlet默认为text/plain,但通常需要显示的指定为text/html。由于经常要设置content-Type，因此HttpServletResponse提供了一个专用的方法setContentType</li>
+<li>Date    当前的GMT时间，可以用setDateHeader来设置这个头以避免转换时间格式的麻烦</li>
+<li>Expires    应该在什么时候认为文档已经过期，从而不在缓存它</li>
+<li>Last-Modified    文档的最后改动时间。</li>
+<li>Location    表示客户当前应该到哪里去提取文档。Location通常不需要直接设置，而是通过HttpServletResponse的sendRedirect方法</li>
+<li>Refresh    表示浏览器应该在多少时间后刷新文档，以秒计。除了刷新当前文档之外，还可以通过setHeader(“Refresh”, “5; URL=<a href="http://host/path&quot;)让浏览器读取指定的页面。这种功能通常通过设置HTML页面和HEAD区的＜META" target="_blank" rel="external">http://host/path&quot;)让浏览器读取指定的页面。这种功能通常通过设置HTML页面和HEAD区的＜META</a> HTTP-EQUIV=”Refresh” CONTENT=”5;URL=<a href="http://host/path&quot;＞实现，因为自动刷新或重定向对于不能使用CGI或servlet的HTML编写者十分重要，但是对于servlet来说，直接设置Refresh头更方便。" target="_blank" rel="external">http://host/path&quot;＞实现，因为自动刷新或重定向对于不能使用CGI或servlet的HTML编写者十分重要，但是对于servlet来说，直接设置Refresh头更方便。</a></li>
+<li>Server    服务器名字。Servlet一般不设置这个值，而是由WEB服务器自己设置</li>
+<li>Set-Cookie    设置和页面关联的Cookie。servlet不应使用response.setHeader(“Set-Cookie”,…),而是应使用HttpServletResponse提供的专用方法addCookie。</li>
+<li>WWW-Authenticate    客户应该在Authenticate头中提供什么类型的授权信息？在包含401状态行的应答中这个头是必须的。Servlet一般不进行这方面的处理，而是让Web服务器的专门机制来控制受密码保护页面的访问。</li>
+</ol>
+<h2 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h2><p>当浏览者访问一个网页时，浏览者的浏览器会向网页所在服务器发出请求。当浏览器接收并显示网页前，此网页所在的服务器会返回一个包含HTTP状态码的信息头。用以响应浏览器的请求。</p>
+<p>HTTP状态码的英文为，HTTP Status Code.</p>
+<p>下面是常用的HTTP状态码:</p>
+<ul>
+<li>200-请求成功</li>
+<li>301-资源(网页等)被永久转移到其他URL</li>
+<li>404-请求的资源(网页等)不存在</li>
+<li>500-内部服务器错误</li>
+</ul>
+<h2 id="HTTP-content-type"><a href="#HTTP-content-type" class="headerlink" title="HTTP content-type"></a>HTTP content-type</h2><p>Content-Type,内容类型，一般是网页中存在的content-type,用于定义网络文件的类型和网页的编码，决定浏览器将以什么形式，什么编码读取这个文件，这就是经常看到一些ASP网页点击的结果确实下载到的一个文件或一张图片的原因。</p>
+
       
     </div>
 
@@ -378,7 +451,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/http/" rel="tag"># http</a>
           
         </div>
       
@@ -391,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/19/python模块/" rel="next" title="python模块">
-                <i class="fa fa-chevron-left"></i> python模块
+              <a href="/2017/06/21/python面向对象编程/" rel="next" title="python面向对象编程">
+                <i class="fa fa-chevron-left"></i> python面向对象编程
               </a>
             
           </div>
@@ -400,10 +473,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/11/HTTP学习笔记/" rel="prev" title="HTTP学习笔记">
-                HTTP学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -452,8 +521,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -535,6 +613,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP学习笔记"><span class="nav-number">1.</span> <span class="nav-text">HTTP学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP简介"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP工作原理"><span class="nav-number">1.1.1.</span> <span class="nav-text">HTTP工作原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP消息结构"><span class="nav-number">1.2.</span> <span class="nav-text">HTTP消息结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端请求消息"><span class="nav-number">1.2.1.</span> <span class="nav-text">客户端请求消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器响应消息"><span class="nav-number">1.2.2.</span> <span class="nav-text">服务器响应消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">1.2.3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP请求方法"><span class="nav-number">1.3.</span> <span class="nav-text">HTTP请求方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP响应头信息"><span class="nav-number">1.4.</span> <span class="nav-text">HTTP响应头信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP状态码"><span class="nav-number">1.5.</span> <span class="nav-text">HTTP状态码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-content-type"><span class="nav-number">1.6.</span> <span class="nav-text">HTTP content-type</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
