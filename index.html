@@ -264,6 +264,133 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="thornbirds.github.io/2017/08/29/网络爬虫/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="吴晨">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/29/网络爬虫/" itemprop="url">Java网络爬虫</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-29T10:22:49+08:00">
+                2017-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/29/网络爬虫/" class="leancloud_visitors" data-flag-title="Java网络爬虫">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>粗浅的了解一下网络爬虫<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/29/网络爬虫/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="thornbirds.github.io/2017/08/22/我不知道的JavaScript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -342,50 +469,14 @@
 
       
         
-          
-            <a id="more"></a>
-<h2 id="1-和-的区别"><a href="#1-和-的区别" class="headerlink" title="1.== 和 ===的区别"></a>1.== 和 ===的区别</h2><p><code>==</code>比较，它会自动转换数据类型再比较，很多时候，会得到非常诡异的结果；</p>
-<p><code>===</code>比较，它不会自动转换数据类型，如果数据类型不一致，返回false，如果一致，再比较。</p>
-<p>所以应该坚持使用 <code>===</code> 比较</p>
-<h2 id="2-多行字符串"><a href="#2-多行字符串" class="headerlink" title="2.多行字符串"></a>2.多行字符串</h2><p>由于多行字符串用\n写起来比较费事，所以最新的ES6标准新增了一种多行字符串的表示方法，用反引号 <code>...</code> 表示</p>
-<pre><code>`我是一个
-多行的
-字符串`
-</code></pre><h2 id="3-数组操作小技巧"><a href="#3-数组操作小技巧" class="headerlink" title="3.数组操作小技巧"></a>3.数组操作小技巧</h2><p>indexOf()    搜索一个指定元素的位置</p>
-<p><strong>slice()</strong>        截取数组的部分元素，返回一个新的数组,参数包头不包尾</p>
-<p>push()        向数组的末尾添加若干元素</p>
-<p>pop()        删除数组的最后一个元素</p>
-<p>unshift()    向数组头部添加若干元素</p>
-<p>shift()        删除数组的第一个元素</p>
-<p><strong>sort()</strong>　对数组进行排序，会直接修改当前数组的元素位置</p>
-<p>reverse()    数组元素反转，123变成321</p>
-<p><strong>splice()</strong>    从制定的所以开始删除若干元素，再从改位置添加若干元素</p>
-<p>concat()    连接两个数组，返回一个新的数组</p>
-<p><strong>join()</strong>        把当前数组的每个元素都用指定的字符串连接起来，返回连接后的字符串</p>
-<h2 id="4-for-…-in-和-for-…-of-的区别"><a href="#4-for-…-in-和-for-…-of-的区别" class="headerlink" title="4.for … in 和 for … of 的区别"></a>4.for … in 和 for … of 的区别</h2><p>for … in循环由于历史遗留问题，它遍历的实际上是对象的属性名称。一个Array数组实际上也是一个对象，它的每个元素的索引被视为一个属性。当我们手动给Array对象添加了额外的属性后，</p>
-<p>for … in循环将把新添加的属性包括在内，但Array的length属性却不包括在内。</p>
-<p>for … of循环则完全修复了这些问题，它只循环集合本身的元素：</p>
-<h2 id="5-函数的定义"><a href="#5-函数的定义" class="headerlink" title="5.函数的定义"></a>5.函数的定义</h2><pre><code>function abs(x) {
-    if (x &gt;= 0) {
-        return x;
-    } else {
-        return -x;
-    }
-}
-</code></pre><ul>
-<li><code>function</code>指出这是一个函数定义；</li>
-<li><code>abs</code>是函数的名称；</li>
-<li><code>(x)</code>括号内列出函数的参数，多个参数以<code>，</code>分隔</li>
-<li><code>{ ... }</code>之间的代码是函数体，包含若干语句</li>
-</ul>
-<p>实际上上述定义的abs()也是一个函数对象，函数名abs视为指向该函数的变量。</p>
-<p><code>rest</code>参数可以获得已定义参数之外的参数</p>
-<h2 id="6-函数变量作用域"><a href="#6-函数变量作用域" class="headerlink" title="6.函数变量作用域"></a>6.函数变量作用域</h2><p>js的函数会先扫描整个函数体，并把所有的变量提升到函数顶部，所以我们应该严格遵守”在函数内部首先申明所有变量”的原则，最常见的做法是用一个<code>var</code>申明函数内部用到的所有变量</p>
-<h2 id="7-全局作用域"><a href="#7-全局作用域" class="headerlink" title="7.全局作用域"></a>7.全局作用域</h2><p>不在任何函数内部定义的变量就具备全局作用域，实际上全局作用域的对象全部都被绑定到了Window的属性上，这说明JavaScript实际上只有一个全局作用域。任何变量（函数也视为变量），如果没有在当前函数作用域中找到，就会继续往上查找，最后如果在全局作用域中也没有找到，则报ReferenceError错误。</p>
-<h2 id="8-解决块级作用域变量的问题"><a href="#8-解决块级作用域变量的问题" class="headerlink" title="8.解决块级作用域变量的问题"></a>8.解决块级作用域变量的问题</h2><p>for循环语句块中定义的变量依旧可以拿到语句外引用，为了解决这一问题，ES6引用关键字<code>let</code>，用<code>let</code>替代<code>var</code>可以申明一个块级作用域的变量。ES6同样也引用了新的关键字<code>const</code>来定义常量。</p>
-<h2 id="9-this的指向问题"><a href="#9-this的指向问题" class="headerlink" title="9.this的指向问题"></a>9.this的指向问题</h2><p>如果以对象的方法形式调用，该函数的this指向被调用的对象。如果单独调用函数，该函数的this指向全局对象，也就是window。</p>
-
-          
+          <p>JavaScript不好玩！！！<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/22/我不知道的JavaScript/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1475,7 +1566,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1488,7 +1579,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
